@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yourmentors-backend
+  labels:
+    app: yourmentors-backend
+    type: backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yourmentors-backend
+      type: backend
+  revisionHistoryLimit: 1
+  template:
+    metadata:
+      labels:
+        app: yourmentors-backend
+        type: backend
+    spec:
+      containers:
+        - name: yourmentors-backend
+          image: mahadihassanrazib/yourmentors-backend:v1.0.1
+          ports:
+            - containerPort: 3000
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
+          imagePullPolicy: Always
+      restartPolicy: Always

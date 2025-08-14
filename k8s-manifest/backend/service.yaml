@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: yourmentors-backend
+  labels:
+    app: yourmentors-backend
+spec:
+  selector:
+    app: yourmentors-backend
+  ports:
+    - name: http
+      port: 3000
+      targetPort: 3000
+  type: LoadBalancer

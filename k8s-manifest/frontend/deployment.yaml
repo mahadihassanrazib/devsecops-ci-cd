@@ -1,0 +1,37 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: yourmentors-frontend
+  labels:
+    app: yourmentors-frontend
+    type: front-end
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yourmentors-frontend
+      type: front-end
+  revisionHistoryLimit: 1
+  template:
+    metadata:
+      labels:
+        app: yourmentors-frontend
+        type: front-end
+    spec:
+      containers:
+        - name: yourmentors-frontend
+          image: mahadihassanrazib/yourmentors-frontend:v1.0.26
+          ports:
+            - containerPort: 5000
+          env:
+            - name: VITE_API_URL
+              value: http://192.168.56.10:3000/api/v1
+          resources:
+            limits:
+              cpu: 500m
+              memory: 512Mi
+            requests:
+              cpu: 100m
+              memory: 128Mi
+          imagePullPolicy: Always
+      restartPolicy: Always
