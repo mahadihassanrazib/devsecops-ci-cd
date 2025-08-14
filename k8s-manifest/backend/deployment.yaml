@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: yourmentors-backend
-          image: mahadihassanrazib/yourmentors-backend:v1.0.3
+          image: mahadihassanrazib/yourmentors-backend:v1.0.4
           ports:
             - containerPort: 3000
           resources:
