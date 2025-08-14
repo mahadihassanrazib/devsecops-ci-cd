@@ -43,7 +43,7 @@ spec:
   resources:
     requests:
       storage: 5Gi
-  storageClassName: penebs-hostpath  # Change based on your cluster's storage class
+  storageClassName: openebs-hostpath  # Change based on your cluster's storage class
 
 ---
 # MySQL StatefulSet
