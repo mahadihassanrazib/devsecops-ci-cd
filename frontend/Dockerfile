@@ -8,10 +8,6 @@ COPY package*.json ./
 # Install dependencies
 RUN npm install
 
-# Define build-time argument for environment variable
-ARG VITE_API_URL
-ENV VITE_API_URL=${VITE_API_URL}
-
 # Copy all other application files
 COPY . .
 
