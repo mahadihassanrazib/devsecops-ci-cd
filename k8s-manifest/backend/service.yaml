@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: yourmentors-backend
+  namespace: crud-app
   labels:
     app: yourmentors-backend
 spec:

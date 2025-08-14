@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: yourmentors-backend
+  namespace: crud-app
   labels:
     app: yourmentors-backend
     type: backend
