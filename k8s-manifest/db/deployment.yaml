@@ -137,7 +137,7 @@ metadata:
   labels:
     app: mysql
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - port: 3306
     targetPort: 3306
@@ -230,7 +230,7 @@ metadata:
   labels:
     app: phpmyadmin
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
   - port: 80
     targetPort: 80
