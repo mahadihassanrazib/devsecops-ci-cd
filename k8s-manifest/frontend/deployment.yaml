@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: yourmentors-frontend
-          image: mahadihassanrazib/yourmentors-frontend:v1.0.43
+          image: mahadihassanrazib/yourmentors-frontend:v1.0.44
           ports:
             - containerPort: 5000
           resources:
